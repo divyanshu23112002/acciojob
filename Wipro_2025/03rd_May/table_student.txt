@@ -1,0 +1,46 @@
+create table student(
+studentid int primary key,
+firstname varchar(50),
+lastname varchar(50),
+Age int,
+Department varchar(50),
+Marks int
+);
+
+INSERT INTO Students (StudentID, FirstName, LastName, Age, Department, Marks)
+VALUES
+(1, 'Amit', 'Sharma', 21, 'Computer Science', 85),
+(2, 'Neha', 'Kumar', 22, 'Electronics', 78),
+ (3, 'Rahul', 'Verma', 20, 'Mechanical', 66),
+(4, 'Sneha', 'Singh', 23, 'Computer Science', 91);
+
+select * from student;
+
+select * from student where department='Computer Science';
+
+select firstname,marks from student where marks>80;
+
+Update student set marks=95 where studentid=2;
+Update student set marks=99 where studentid=1;
+Update student set marks=60 where studentid=3;
+
+Insert into student (studentid, firstname, lastname, age, department, marks) values (5, 'Karan', 'Kumar', 24, 'DataBase
+Managgemnet', 69),(6, 'Ayush', 'Kumar', 23, 'Mathematics', 75);
+
+delete from student where studentid=4;
+
+delete from student where marks<60;
+
+truncate table student; ----> All data is removed but table is present
+
+Drop table student;
+
+
+
+
+
+
+
+
+
+

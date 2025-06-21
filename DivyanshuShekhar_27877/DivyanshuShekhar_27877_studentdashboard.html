@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <tittle></tittle>
+        <style>
+            nav{
+                background-color: #004080;
+                padding: 10px;
+                text-align: center;
+
+            }
+            nav a{
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+                display: inline-block;
+                padding: 5px 10px;
+                transition: background-color 0.3s;
+
+            }
+            nav a::after hover
+            {
+                background-color: #003366;
+
+            }
+            table
+            {
+                width: 100%;
+                border-collapse:collapse ;
+                margin: 20px 0;
+
+            }
+            th,td
+            {
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+            th{
+                background-color: #cce6ff;
+                font-weight: bold;
+            }
+            form{
+                margin-top: 20px;
+                margin-bottom: 400px;
+            }
+            label
+            {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+            input
+            {
+                width: 100px;
+                padding: 8px;
+                margin-top: 5px;
+            }
+            button
+            {
+                text-align: 15px;
+                padding: 10px 20px;
+                background-color: #004080;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover
+            {
+                background-color: #003366;
+            }
+            footer
+            {
+                text-align: center;
+                padding: 15px;
+                background-color: #f1f1f1;
+                margin-top: 40px;
+
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <header>
+            <h1>Student Dashboard</h1>
+        </header>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Students</a>
+            <a href="#">Reports</a>
+        </nav>
+        <main>
+            <section>
+                <h2>Student List</h2>
+                <table>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Grade</th>
+                        <th>Email</th>
+                    </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>Ram Kumar</td>
+                        <td>8</td>
+                        <td>ramkumar@school.edu</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Shyam Kumar</td>
+                        <td>9</td>
+                        <td>shyam123@school.edu</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Gita Kumari</td>
+                        <td>7</td>
+                        <td>gitakumari@school.edu</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h2>Add New Student</h2>
+                <form>
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" name="studentId" required placeholder="Enter student ID">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required placeholder="Enter Full Name">
+                    <label for="grade">Grade</label>
+                    <input type="number" id="grade" required placeholder="Enter Grade">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter Email Adddress">
+                    <button type="submit">Add Student</button>
+                </form>
+            </section>
+
+        </main>
+        <footer>
+            Contact us:<a href="mailto:admin@school.edu">admin@school.edu</a>
+        </footer>
+    </body>
+</html>
