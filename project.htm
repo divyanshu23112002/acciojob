@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter using HTML</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    #count {
+      font-weight: bold;
+    }
+
+    #error {
+      color: red;
+      display: none;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 20px 10px;
+      border: 1px solid white;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #clearBtn {
+      display: none; 
+    }
+
+    hr {
+      width: 200px;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Counter using HTML</h1>
+  <p>Your Current Count is : <span id="count">0</span></p>
+  <hr>
+  <p id="error">Error : Cannot go below 0</p>
+
+  <button id="decrementBtn">Decrement</button>
+  <button id="incrementBtn">Increment</button>
+  <button id="clearBtn">Clear</button>
+
+  <script>
+    let count = 0;
+    const countDisplay = document.getElementById("count");
+    const errorMsg = document.getElementById("error");
+    const decrementBtn = document.getElementById("decrementBtn");
+    const incrementBtn = document.getElementById("incrementBtn");
+    const clearBtn = document.getElementById("clearBtn");
+
+    function updateUI() {
+      countDisplay.textContent = count;
+      errorMsg.style.display = count === 0 ? "block" : "none";
+      clearBtn.style.display = count > 0 ? "inline-block" : "none";
+    }
+
+    incrementBtn.addEventListener("click", () => {
+      count++;
+      updateUI();
+    });
+
+    decrementBtn.addEventListener("click", () => {
+      if (count > 0) {
+        count--;
+        updateUI();
+      } else {
+        errorMsg.style.display = "block";
+      }
+    });
+
+    clearBtn.addEventListener("click", () => {
+      count = 0;
+      updateUI();
+    });
+
+    updateUI(); 
+  </script>
+
+</body>
+</html>
